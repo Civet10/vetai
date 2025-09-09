@@ -903,6 +903,9 @@ section {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
 
   .service-card {
     padding: var(--spacing-md);
