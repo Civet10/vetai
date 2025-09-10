@@ -145,16 +145,51 @@ body {
   border-radius: 20px;   /* opcional: cantos arredondados */
 }
 
-.section-parallax {
+.section-parallax1 {
   background-image: url('imagem/dog3.png'); /* caminho da sua imagem */
   background-attachment: fixed;  /* efeito parallax */
   background-position: center;   /* centraliza a imagem */
   background-repeat: no-repeat;  /* não repete */
-  background-size: cover;        /* ocupa toda a área */
+  background-size: cover;        /* ocupa toda a área - cover*/
   height: 400px;                 /* altura da seção */
   margin: var(--spacing-lg) 0;   /* espaçamento entre seções */
   border-radius: 20px;           /* opcional: cantos arredondados */
 }
+.section-parallax2 {
+  background-image: url('imagem/spitz.png'); /* caminho da sua imagem */
+  background-attachment: fixed;  /* efeito parallax */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* não repete */
+  background-size: cover;        /* ocupa toda a área - cover*/
+  height: 400px;                 /* altura da seção */
+  margin: var(--spacing-lg) 0;   /* espaçamento entre seções */
+  border-radius: 20px;           /* opcional: cantos arredondados */
+}
+
+
+/*
+.section-parallax-1 {
+  background-image: url('imagem/dog3.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin: 40px 0;
+}
+
+.section-parallax-2 {
+  background-image: url('imagem/spitz.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin: 40px 0;
+}
+
+*/
+
 
 /* Hero Section */
 .hero {
@@ -163,6 +198,9 @@ body {
   align-items: center;
   justify-content: center;
   /*background: var(--gradient-bg);*/
+  /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('imagem/dog1.png') no-repeat center center/cover;*/
+
   background: url('imagem/dog1.png') no-repeat center center/cover; /* imagem de fundo */
   position: relative;
   overflow: hidden;
@@ -401,7 +439,7 @@ section {
 }
 
 /* About Section */
-.about {
+*/*about {
   background: var(--dark-surface);
 }
 
@@ -475,6 +513,105 @@ section {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+*/
+
+
+/* About Section Geral */
+.about {
+  background: var(--dark-surface);
+  padding: var(--spacing-xl) 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Quando queremos inverter os lados */
+.about-content.reverse {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl; /* inverte os lados sem alterar HTML */
+}
+.about-content.reverse > * {
+  direction: ltr; /* volta o texto ao normal */
+}
+
+.about-text h3 {
+  color: var(--primary-neon);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+.about-text h3:first-child {
+  margin-top: 0;
+}
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+}
+
+/* Imagem */
+.about-image {
+  text-align: center;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+.about-image-title {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--spacing-xs);
+}
+
+/* Features mantém igual */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.feature-card {
+  background: var(--dark-card);
+  padding: var(--spacing-md);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 0, 128, 0.1);
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-neon);
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.2);
+}
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-sm);
+}
+.feature-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+.feature-card h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-semibold);
+}
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+
 
 /* Services Section */
 .services-grid {
