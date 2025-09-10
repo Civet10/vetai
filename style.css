@@ -771,7 +771,7 @@ section {
   box-shadow: 0 10px 30px rgba(255, 0, 128, 0.2);
 }
 
-.member-photo {
+/*.member-photo {
   width: 120px;
   height: 120px;
   background: var(--gradient-primary);
@@ -786,7 +786,30 @@ section {
 .member-photo i {
   font-size: 3rem;
   color: white;
+}*/
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md) auto;
+  border: 3px solid var(--primary-neon); /* 🔹 borda rosa neon */
+  overflow: hidden; /* 🔹 corta imagem fora do círculo */
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.3);
+  background: none; /* 🔹 tira fundo gradiente se quiser só a foto */
 }
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔹 imagem preenche sem distorcer */
+  display: block;
+}
+
+
 
 .member-info {
   text-align: center;
