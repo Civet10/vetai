@@ -137,6 +137,24 @@ body {
   transition: 0.3s;
   border-radius: 2px;
 }
+.section-image img {
+  width: 100%;           /* ocupa toda a largura */
+  height: auto;          /* mantém a proporção */
+  display: block;        /* remove espaços extras */
+  margin: var(--spacing-lg) 0; /* espaçamento acima e abaixo */
+  border-radius: 20px;   /* opcional: cantos arredondados */
+}
+
+.section-parallax {
+  background-image: url('imagem/dog3.png'); /* caminho da sua imagem */
+  background-attachment: fixed;  /* efeito parallax */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* não repete */
+  background-size: cover;        /* ocupa toda a área */
+  height: 400px;                 /* altura da seção */
+  margin: var(--spacing-lg) 0;   /* espaçamento entre seções */
+  border-radius: 20px;           /* opcional: cantos arredondados */
+}
 
 /* Hero Section */
 .hero {
@@ -144,7 +162,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-bg);
+  /*background: var(--gradient-bg);*/
+  background: url('imagem/dog1.png') no-repeat center center/cover; /* imagem de fundo */
   position: relative;
   overflow: hidden;
 }
