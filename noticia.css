@@ -1,0 +1,80 @@
+
+
+/* Fundo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f7; /* rosa neon clarinho */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Logo */
+.news-header .logo {
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Título da notícia */
+.news-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #ff007f; /* rosa neon mais forte para destaque */
+}
+
+/* Foto da notícia */
+.news-image {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.news-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Legenda da foto */
+.photo-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Texto da notícia */
+.news-text {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Linha separadora */
+.footer-line {
+  border: none;
+  height: 2px;
+  background-color: #ff007f;
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+}
+.news-footer{
+    margin-bottom: 200px;
+}
+
+/* Link para próxima notícia */
+.next-news {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right; /* canto direito */
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff007f;
+  transition: color 0.3s ease;
+}
+
+.next-news:hover {
+  color: #cc0066; /* tom mais escuro ao passar o mouse */
+}

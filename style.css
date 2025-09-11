@@ -715,6 +715,7 @@ section {
   border: 1px solid rgba(255, 0, 128, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
+  height: 450px;
 }
 
 .news-card:hover {
@@ -960,6 +961,7 @@ section {
   line-height: 1.8;
   margin-bottom: var(--spacing-md);
 }
+
 
 /* Footer */
 .footer {
