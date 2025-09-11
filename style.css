@@ -708,14 +708,16 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--spacing-md);
 }
-
+.news-grid a{
+  text-decoration: none;
+}
 .news-card {
   background: var(--dark-card);
   border-radius: 20px;
   border: 1px solid rgba(255, 0, 128, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
-  height: 450px;
+  height: 400px;
 }
 
 .news-card:hover {
