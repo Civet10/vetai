@@ -213,3 +213,67 @@ window.addEventListener('load', () => {
     link.href = 'https://wa.me';
     document.head.appendChild(link);
 });
+
+// noticiasß
+const newsData = {
+    1: {
+      title: "Pré-inauguração Hub Comitiva Inovação",
+      date: "17/06/2025",
+      img: "imagem/preinauguracao.jpeg",
+      text: "A VetAI participou da pré-inauguração do Hub Comitiva Inovação, um espaço dedicado à inovação e tecnologia em Barretos."
+    },
+    2: {
+      title: "Inauguração Comitiva Inovação com presença do Grupo Bruto Valley",
+      date: "30/06/2025",
+      img: "imagem/brutoval.jpeg",
+      text: "Evento de inauguração oficial com a presença do Grupo Bruto Valley, marcando uma nova fase para startups de tecnologia."
+    },
+    3: {
+      title: "Apresentação do Pitch",
+      date: "25/07/2025",
+      img: "imagem/pitch.jpeg",
+      text: "Durante a seletiva, apresentamos nosso pitch e fomos selecionados como uma das startups residentes no Hub."
+    },
+    4: {
+      title: "Visita do Senador Marcos Pontes",
+      date: "25/08/2025",
+      img: "imagem/senador.jpeg",
+      text: "O senador Marcos Pontes visitou o Hub Comitiva Inovação, reconhecendo a importância da VetAI no avanço da veterinária com IA."
+    }
+  };
+  
+  // elementos do modal
+  const modal = document.getElementById("newsModal");
+  const closeBtn = document.querySelector(".close");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDate = document.getElementById("modalDate");
+  const modalImage = document.getElementById("modalImage");
+  const modalText = document.getElementById("modalText");
+  
+  // abri modal ao clicar no card
+  document.querySelectorAll(".news-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const id = card.dataset.id;
+      const data = newsData[id];
+  
+      modalTitle.textContent = data.title;
+      modalDate.textContent = data.date;
+      modalImage.src = data.img;
+      modalText.textContent = data.text;
+  
+      modal.style.display = "flex";
+    });
+  });
+  
+  // Fechar modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  
+  // Fechar ao clicar fora
+  window.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+  

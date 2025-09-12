@@ -353,59 +353,54 @@
     <div class="news-grid">
       
         
-        <!-- Card 2 -->
-        <a href="pages/noticia1.html">
-        <div class="news-card">
+        <div class="news-card" data-id="1">
             <div class="news-image">
-                <img src="imagem/preinauguracao.jpeg" alt="Notícia 2">
+              <img src="imagem/preinauguracao.jpeg" alt="Notícia 1">
             </div>
             <div class="news-content">
-                <h3>Pré-inauguração Hub Comitiva Inovação</h3>
-                <span class="news-date">17/06/2025</span>
+              <h3>Pré-inauguração Hub Comitiva Inovação</h3>
+              <span class="news-date">17/06/2025</span>
             </div>
-        </div>
-        </a>
-
-        <!-- Card 3 -->
-      <a href="pages/noticia2.html">
-      <div class="news-card">
-        <div class="news-image">
-          <img src="imagem/brutoval.jpeg" alt="Evento 3">
-        </div>
-        <div class="news-content">
-          <h3>Inauguração Comitiva Inovação com presença do Grupo Bruto Valley</h3>
-          <span class="news-date">30/06/2025</span>
-        </div>
-      </div>
-      </a>
-
-        <!-- Card 2 -->
-         <a href="/pages/noticia3.html">
-        <div class="news-card">
+          </div>
+          
+          <div class="news-card" data-id="2">
             <div class="news-image">
-                <img src="imagem/pitch.jpeg" alt="Notícia 2">
+              <img src="imagem/brutoval.jpeg" alt="Evento 2">
+            </div>
+            <div class="news-content">
+              <h3>Inauguração Comitiva Inovação com presença do Grupo Bruto Valley</h3>
+              <span class="news-date">30/06/2025</span>
+            </div>
+          </div>
+
+                <!-- Card 2 -->
+         
+        <div class="news-card" data-id="3">
+            <div class="news-image">
+                <img src="imagem/pitch.jpeg" alt="Notícia 3">
             </div>
             <div class="news-content">
                 <h3>Apresentação do pitch durante processo de seletiva das startups</h3>
                 <span class="news-date">25/07/2025</span>
             </div>
         </div>
-        </a>
+        
         <!-- Card 1 -->
-         <a href="./pages/noticia4.html">
-        <div class="news-card">
+         
+        <div class="news-card" data-id="4">
           <div class="news-image">
-            <img src="imagem/senador.jpeg" alt="Notícia 1">
+            <img src="imagem/senador.jpeg" alt="Notícia 4">
           </div>
           <div class="news-content">
             <h3>Senador Marcos Pontes visita o Comitiva Inovação</h3>
             <span class="news-date">25/08/2025</span>
           </div>
         </div>
-        </a>
+        
     </div>
   </div>
 </section>
+
 
     
     <!-- Contact Section -->
@@ -483,5 +478,22 @@
     </footer>
 
     <script src="main.js" defer></script>
+
+    <!-- Modal Estrutura -->
+<div id="newsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+  
+      <!-- Aqui vamos preencher dinamicamente -->
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <span id="modalDate"></span>
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Notícia" />
+        <p id="modalText"></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

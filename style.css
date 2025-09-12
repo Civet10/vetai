@@ -1152,3 +1152,46 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-light);
 }
+
+/* Modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center; align-items: center;
+}
+
+.modal-content {
+  background-color: #ffe6f7; /* rosa neon clarinho */
+  background: var(--accent-glow);
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.modal-body img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute; bottom: 15px; right: 20px;
+  font-size: 28px; font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
