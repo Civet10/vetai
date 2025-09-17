@@ -89,14 +89,44 @@ function typeWriter(element, text, speed = 100) {
 }
 
 // Initialize typing animation when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 500);
+function typeWriterHTML(element, html, speed) {
+  let i = 0;
+  let isTag = false;
+  let text = '';
+
+  function type() {
+    const char = html[i++];
+    if (char === '<') {
+      isTag = true;
     }
+    if (isTag) {
+      text += char;
+      if (char === '>') {
+        isTag = false;
+      }
+    } else {
+      text += char;
+    }
+
+    element.innerHTML = text;
+
+    if (i < html.length) {
+      setTimeout(type, isTag ? 0 : speed); 
+      // se for tag, não faz pausa; se for texto, pausa
+    }
+  }
+  type();
+}
+
+window.addEventListener('load', () => {
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle) {
+    const originalHTML = heroTitle.innerHTML; // com tags
+    heroTitle.innerHTML = ''; // limpa antes de digitar
+    setTimeout(() => {
+      typeWriterHTML(heroTitle, originalHTML, 50); // 50 ms por caractere
+    }, 500);
+  }
 });
 
 // Add glow effect to cards on hover
@@ -223,7 +253,7 @@ const newsData = {
       text: "A VetAI participou da pré-inauguração do Hub Comitiva Inovação, um espaço dedicado à inovação e tecnologia em Barretos."
     },
     2: {
-      title: "Inauguração Comitiva Inovação com presença do Grupo Bruto Valley",
+      title: "Inauguração com presença do Bruto Valley",
       date: "30/06/2025",
       img: "imagem/brutoval.jpeg",
       text: "Evento de inauguração oficial com a presença do Grupo Bruto Valley, marcando uma nova fase para startups de tecnologia."
